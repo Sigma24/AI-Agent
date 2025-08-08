@@ -47,8 +47,8 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    http://localhost:3000
 
 6. **Use the app:**
-   -Enter your question or request (e.g., "What's the weather in New York?" or "Latest technology news").
-   -Click Send to receive AI-generated weather or news summaries.
+   - Enter your question or request (e.g., "What's the weather in New York?" or "Latest technology news").
+   - Click Send to receive AI-generated weather or news summaries.
 
 **System Design**
    -The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
