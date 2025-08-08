@@ -51,10 +51,10 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    - Click Send to receive AI-generated weather or news summaries.
 
 **System Design**
-   -The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
-   -The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to call and with what arguments.
-   -The backend parses the AI’s JSON response to determine which API to call:
-   -Calls getWeather(city) for weather data.
-   -Calls getNews(topic) for news articles.
-   -The fetched data is then used to prompt the AI model again to generate a natural, human-friendly summary.
-   -Finally, the backend returns this summary to the frontend, which displays it to the user.
+   - The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
+   - The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to call and with what arguments.
+   - The backend parses the AI’s JSON response to determine which API to call:
+   - Calls getWeather(city) for weather data.
+   - Calls getNews(topic) for news articles.
+   - The fetched data is then used to prompt the AI model again to generate a natural, human-friendly summary.
+   - Finally, the backend returns this summary to the frontend, which displays it to the user.
