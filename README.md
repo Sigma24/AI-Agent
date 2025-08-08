@@ -50,7 +50,7 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    - Enter your question or request (e.g., "What's the weather in New York?" or "Latest technology news").
    - Click Send to receive AI-generated weather or news summaries.
 
-**System Design**
+## System Design
    - The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
    - The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to call and with what arguments.
    - The backend parses the AI’s JSON response to determine which API to call:
