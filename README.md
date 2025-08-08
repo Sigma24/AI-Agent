@@ -27,3 +27,7 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    ```bash
    git clone https://github.com/Sigma24/AI-Agent-.git
    cd AI-Agent-
+
+## Install dependencies
+   ```bash
+       npm install
