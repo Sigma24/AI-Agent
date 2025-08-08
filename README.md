@@ -34,12 +34,12 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    
 3. **Set up environment variables:**
    - Copy .env.example to .env.local:
-    ```bash
+     ```bash
     cp .env.example .env.local
    - Replace the placeholder values with your actual API keys:
-   - Gemini API key (Google AI Studio) → https://aistudio.google.com/
-   - Weather API key (OpenWeatherMap) → https://openweathermap.org/api 
-   - News API key (NewsAPI) → https://newsapi.org/ 
+   - **Gemini API key (Google AI Studio)** → https://aistudio.google.com/
+   - **Weather API key (OpenWeatherMap)** → https://openweathermap.org/api 
+   - **News API key (NewsAPI)** → https://newsapi.org/ 
 
 
 5. **Run the development server:** 
