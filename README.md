@@ -33,26 +33,31 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    npm install
    
 3. **Set up environment variables:**
-   ```bash
-   GEMINI_API_KEY=your_google_gemini_api_key
-   WEATHER_API_KEY=your_openweathermap_api_key
-   NEWS_API_KEY=your_newsapi_key
+   - Copy .env.example to .env.local:
+    ```bash
+    cp .env.example .env.local
+   - Replace the placeholder values with your actual API keys:
+   - Gemini API key (Google AI Studio) → https://aistudio.google.com/
+   - Weather API key (OpenWeatherMap) → https://openweathermap.org/api 
+   - News API key (NewsAPI) → https://newsapi.org/ 
 
-4. **Run the development server:** 
+
+5. **Run the development server:** 
    ```bash
    npm run dev
 
-5. **Open your browser and visit:**
+6. **Open your browser and visit:**
     ```bash
    http://localhost:3000
 
-6. **Use the app:**
+7. **Use the app:**
    - Enter your question or request (e.g., "What's the weather in New York?" or "Latest technology news").
    - Click Send to receive AI-generated weather or news summaries.
 
 ## System Design
    - The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
-   - The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to call and with what arguments.
+   - The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to 
+     call and with what arguments.
    - The backend parses the AI’s JSON response to determine which API to call:
    - Calls getWeather(city) for weather data.
    - Calls getNews(topic) for news articles.
