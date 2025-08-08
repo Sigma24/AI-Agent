@@ -19,6 +19,8 @@ The AI model receives a prompt instructing it to return a JSON object specifying
 - **External APIs:**
   - [OpenWeatherMap API](https://openweathermap.org/api) for weather data
   - [NewsAPI](https://newsapi.org/) for news articles
+  - [Google AI Studio](https://aistudio.google.com/app/apikey) for Gemini API key
+
 - **HTTP Client:** Axios
 
 ## Instructions for Running the App
