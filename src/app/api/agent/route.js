@@ -20,7 +20,6 @@ async function getNews(topic) {
   const res = await axios.get(
     `https://newsapi.org/v2/everything?q=${topic}&apiKey=${process.env.NEWS_API_KEY}&pageSize=3`
   );
-  // Return raw articles data array instead of string
   return res.data.articles.map(a => ({
     title: a.title,
     url: a.url,
@@ -92,8 +91,6 @@ Write a friendly and natural weather summary sentence for the user.
 
     } else if (parsed.tool === "getNews" && parsed.args.topic) {
       const articles = await getNews(parsed.args.topic);
-
-      // Format raw news data into a readable list for Gemini prompt
       const articlesText = articles
         .map((a, i) => `${i + 1}. ${a.title} (Read more: ${a.url})`)
         .join("\n");
