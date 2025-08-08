@@ -33,28 +33,28 @@ The AI model receives a prompt instructing it to return a JSON object specifying
    npm install
    
 3. **Set up environment variables:**
-  ```bash
+   ```bash
    GEMINI_API_KEY=your_google_gemini_api_key
    WEATHER_API_KEY=your_openweathermap_api_key
    NEWS_API_KEY=your_newsapi_key
 
-4. ** Run the development server:** 
- ```bash
+4. **Run the development server:** 
+   ```bash
    npm run dev
 
 5. **Open your browser and visit:**
-  ```bash
+    ```bash
    http://localhost:3000
 
 6. **Use the app:**
-   .Enter your question or request (e.g., "What's the weather in New York?" or "Latest technology news").
-   .Click Send to receive AI-generated weather or news summaries.
+   -Enter your question or request (e.g., "What's the weather in New York?" or "Latest technology news").
+   -Click Send to receive AI-generated weather or news summaries.
 
 **System Design**
-   .The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
-   .The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to call and with what arguments.
-   .The backend parses the AI’s JSON response to determine which API to call:
-   .Calls getWeather(city) for weather data.
-   .Calls getNews(topic) for news articles.
-   .The fetched data is then used to prompt the AI model again to generate a natural, human-friendly summary.
-   .Finally, the backend returns this summary to the frontend, which displays it to the user.
+   -The frontend captures user input and sends it via a POST request to the backend API route /api/agent.
+   -The backend sends a prompt with the user's message to the Google Gemini generative model, instructing it to decide which tool to call and with what arguments.
+   -The backend parses the AI’s JSON response to determine which API to call:
+   -Calls getWeather(city) for weather data.
+   -Calls getNews(topic) for news articles.
+   -The fetched data is then used to prompt the AI model again to generate a natural, human-friendly summary.
+   -Finally, the backend returns this summary to the frontend, which displays it to the user.
